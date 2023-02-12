@@ -489,13 +489,6 @@ THEN "sports and outdoors_cycling_accessories_uncategorized"
 
 
 
-// OUTLIERS
-
-ELSEIF REGEXP_MATCH([Product Concat], "kasfam.*(mascara)|mascara\santipolvo")
-THEN "health and personal care_medical, remedies and dietary supplements_surgical face masks_uncategorized"
-
-
-
 
 // CLOTHING SPORTSWEAR
 
@@ -702,6 +695,14 @@ THEN "automotive_car and motorbike accessories_protective clothing_uncategorized
 
 ELSEIF  [Ml Category 2] = "cycling" and [merchant_name (copie pour filter)] in ("ebay") and REGEXP_MATCH([Product Concat],  "pro\scycling\smanager")
 THEN "apps and games_uncategorized_uncategorized_uncategorized"
+
+
+
+// OUTLIERS
+
+ELSEIF REGEXP_MATCH([Product Concat], "kasfam.*(mascara)|mascara\santipolvo")
+THEN "health and personal care_medical, remedies and dietary supplements_surgical face masks_uncategorized"
+
 
 
 
